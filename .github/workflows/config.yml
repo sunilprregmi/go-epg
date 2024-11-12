@@ -1,0 +1,36 @@
+name: DH GO Public EPG - Daily Update
+
+# This schedule makes sure the job runs every day at 6:00 AM in Kathmandu Time (which is 12:15 AM UTC).
+on:
+  schedule:
+    - cron: '15 0 * * *'  # The cron expression tells GitHub to run the workflow at 12:15 AM UTC, which is 6:00 AM Kathmandu Time.
+  workflow_dispatch:  # This allows you to manually trigger the workflow whenever needed.
+
+jobs:
+  update-epg:
+    runs-on: ubuntu-latest  # The job will run on the latest version of Ubuntu.
+
+    steps:
+    - name: Checkout the code from the repository
+      uses: actions/checkout@v3  # This gets the latest version of your code from GitHub.
+
+    - name: Set up Python 3.12 environment
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'  # Makes sure Python 3.12 is used for the script.
+
+    - name: Install dependencies (requests library)
+      run: |
+        python -m pip install --upgrade pip  # Ensures pip (Python's package installer) is up to date.
+        pip install requests  # Installs the "requests" library that the script uses to fetch data.
+
+    - name: Run the DH GO EPG script to generate XML files
+      run: python gotv_epg.py  # Runs the Python script that generates the XML and compressed XML files.
+
+    - name: Upload the generated XML files as GitHub artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: epg-xml-files  # This will name the uploaded artifact as "epg-xml-files".
+        path: |
+          gotv.xml  # The uncompressed XML file.
+          gotv.xml.gz  # The compressed version of the XML file.

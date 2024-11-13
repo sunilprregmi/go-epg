@@ -1,8 +1,9 @@
 name: Scrape EPG Guide
 
 on:
+  workflow_dispatch:  # Allows manual triggering
   schedule:
-    - cron: '*/3 * * * *' # Every 10 min
+    - cron: '*/10 * * * *'  # Every 10 minutes
 
 jobs:
   build:
@@ -31,7 +32,7 @@ jobs:
           git config --local user.email "prasunil058@gmail.com"
           git config --local user.name "sunilprregmi"
           git add -A
-          git diff-index --quiet HEAD || (git commit -a -m "scraped notices" --allow-empty)
+          git diff-index --quiet HEAD || (git commit -a -m "scraped epg - $(date +'%Y-%m-%d') --allow-empty)
           
       - name: push changes
         uses: ad-m/github-push-action@v0.8.0

@@ -3,7 +3,7 @@ name: Scrape EPG Guide
 on:
   workflow_dispatch:  # Allows manual triggering
   schedule:
-    - cron: '*/10 * * * *'  # Every 10 minutes
+    - cron: '0 6 * * *'  # Runs every day at 6 AM
 
 jobs:
   build:

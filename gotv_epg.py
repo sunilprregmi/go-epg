@@ -12,18 +12,16 @@ genre_url = 'https://soapbox.dishhome.com.np/dhdbcacheV2/liveAssetsBasedOnkey'
 
 # Set Kathmandu timezone
 kathmandu_tz = pytz.timezone('Asia/Kathmandu')
-now = datetime.now(kathmandu_tz)
+now = datetime.now(kathmandu_tz)  # Current time in Kathmandu
 
-# Set the start time to today's midnight (00:00 AM)
-start_of_day = now.replace(hour=0, minute=0, second=0, microsecond=0)
-
-# Set the stop time to tomorrow's midnight (00:00 AM)
-end_of_day = start_of_day + timedelta(days=1)
+# Get today's date and 12:00 AM timestamp for whole day EPG
+start_of_day = datetime(now.year, now.month, now.day, 0, 0, 0, tzinfo=kathmandu_tz)  # 12:00 AM
+end_of_day = start_of_day + timedelta(days=1) - timedelta(seconds=1)  # 11:59:59 PM
 
 # Update payload timestamps
 payload = {
-    'startTimeTimestamp': int(start_of_day.timestamp() * 1000),  # Start at 12 AM today
-    'stopTimeTimestamp': int(end_of_day.timestamp() * 1000),  # End at 12 AM tomorrow
+    'startTimeTimestamp': int(start_of_day.timestamp() * 1000),  # 12:00 AM
+    'stopTimeTimestamp': int(end_of_day.timestamp() * 1000),  # 11:59:59 PM
     'account_id': 1, 'offset': 0, 'limit': 1000,
     'programmeDate': now.strftime('%Y-%m-%d'),  # YYYY-MM-DD format
     'timezone': 'plus0545', 'date': now.strftime('%Y%m%d')  # YYYYMMDD format
@@ -65,17 +63,17 @@ for channel_data in epg_data:
         stop_time = program.get("stopTime", "235959")
         program_id = str(program.get("id", "TBA"))
 
-        # Convert start and stop times to datetime objects
-        program_start = kathmandu_tz.localize(datetime.strptime(programme_date + start_time, "%Y%m%d%H%M%S"))
-        program_stop = kathmandu_tz.localize(datetime.strptime(programme_date + stop_time, "%Y%m%d%H%M%S"))
+        # Convert to datetime object for validation
+        program_start = datetime.strptime(f"{programme_date} {start_time}", "%Y%m%d %H:%M:%S").replace(tzinfo=kathmandu_tz)
+        program_stop = datetime.strptime(f"{programme_date} {stop_time}", "%Y%m%d %H:%M:%S").replace(tzinfo=kathmandu_tz)
 
-        # Ensure the program falls within our 12 AM to 12 AM window
-        if not (start_of_day <= program_start < end_of_day):
-            continue
+        # Ensure the program belongs to today's EPG (including those that end at 12:00 AM)
+        if not (start_of_day <= program_stop <= end_of_day):
+            continue  
 
-        # Format timestamps in EPG format
-        start = program_start.strftime('%Y%m%d%H%M%S') + " +0545"
-        stop = program_stop.strftime('%Y%m%d%H%M%S') + " +0545"
+        # Format timestamps for XMLTV
+        start = program_start.strftime("%Y%m%d%H%M%S") + " +0545"
+        stop = program_stop.strftime("%Y%m%d%H%M%S") + " +0545"
 
         title = sanitize_text(program.get("displayName", "TBA"))
         description = sanitize_text(program.get("description", "TBA"))
@@ -111,5 +109,5 @@ with open("gotv.xml", "w", encoding="utf-8") as xml_file:
 with gzip.open("gotv.xml.gz", "wt", encoding="utf-8") as gz_file:
     gz_file.write(pretty_xml)
 
-print(f"EPG Data fetched for {start_of_day.strftime('%Y-%m-%d')} (12:00 AM to 11:59 PM) Kathmandu Time")
+print(f"EPG Data fetched for {now.strftime('%Y-%m-%d %H:%M:%S')} (Kathmandu Time)")
 print("XML and compressed XML files saved successfully as gotv.xml and gotv.xml.gz.")

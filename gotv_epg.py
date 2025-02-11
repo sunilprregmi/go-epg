@@ -4,20 +4,25 @@ from xml.dom import minidom
 from datetime import datetime, timedelta
 import re
 import gzip
+import pytz  # Import pytz for timezone handling
 
 # URLs for data
 epg_url = 'https://soapbox.dishhome.com.np/dhdbcacheV2/epgjson'
 genre_url = 'https://soapbox.dishhome.com.np/dhdbcacheV2/liveAssetsBasedOnkey'
 
-# Set up payload
-now = datetime.now()
+# Set Kathmandu timezone
+kathmandu_tz = pytz.timezone('Asia/Kathmandu')
+now = datetime.now(kathmandu_tz)  # Get current time in Kathmandu
+
+# Update payload timestamps
 payload = {
     'startTimeTimestamp': int(now.timestamp() * 1000),
     'stopTimeTimestamp': int((now + timedelta(days=1)).timestamp() * 1000),
     'account_id': 1, 'offset': 0, 'limit': 1000,
-    'programmeDate': now.strftime('%Y-%m-%d'),
-    'timezone': 'plus0545', 'date': now.strftime('%Y%m%d')
+    'programmeDate': now.strftime('%Y-%m-%d'),  # YYYY-MM-DD format
+    'timezone': 'plus0545', 'date': now.strftime('%Y%m%d')  # YYYYMMDD format
 }
+
 headers = {"Authorization": "Bearer null", "User-Agent": "okhttp/4.10.0"}
 
 # Fetch data
@@ -49,13 +54,18 @@ for channel_data in epg_data:
     channels.append(channel)
 
     for program in channel_data.get("epg", []):
-        programme_date = program.get("programmeDate", now.strftime('%Y%m%d'))
+        programme_date = program.get("programmeDate", "").replace("-", "")
+
+        # Skip programs that are not for today
+        if programme_date != now.strftime('%Y%m%d'):
+            continue  
+
         start_time = program.get("startTime", "000000")
         stop_time = program.get("stopTime", "235959")
         program_id = str(program.get("id", "TBA"))
 
-        start = programme_date.replace("-", "") + start_time.replace(":", "") + " +0000"
-        stop = programme_date.replace("-", "") + stop_time.replace(":", "") + " +0000"
+        start = programme_date + start_time.replace(":", "") + " +0545"
+        stop = programme_date + stop_time.replace(":", "") + " +0545"
 
         title = sanitize_text(program.get("displayName", "TBA"))
         description = sanitize_text(program.get("description", "TBA"))

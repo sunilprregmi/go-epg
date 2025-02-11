@@ -28,15 +28,15 @@ headers = {"Authorization": "Bearer null", "User-Agent": "okhttp/4.10.0"}
 # Fetch data
 try:
     epg_response = requests.post(epg_url, data=payload, headers=headers)
-    genre_response = requests.post(genre_url, data=payload, headers=headers)
-
     epg_response.raise_for_status()
-    genre_response.raise_for_status()
-
     epg_data = epg_response.json().get("data", [])
+
+    genre_response = requests.post(genre_url, data=payload, headers=headers)
+    genre_response.raise_for_status()
     genre_data = genre_response.json()
+
     genre_mapping = {str(d["id"]): d["name"] for d in genre_data["data"][0]["genreDetails"].values()}
-except requests.exceptions.RequestException as e:
+except Exception as e:
     print(f"Error fetching data: {e}")
     exit(1)
 
@@ -57,27 +57,20 @@ for channel_data in epg_data:
     thumbnails = channel_data.get("thumbnails", [])
     icon_url = f"https://soapbox.dishhome.com.np/genesis/{thumbnails[0]['thumbnailUrl']}" if thumbnails else ""
 
+    # Create channel entry
     channel = ET.Element("channel", {"id": channel_id})
     ET.SubElement(channel, "display-name").text = channel_title
     if icon_url:
         ET.SubElement(channel, "icon", {"src": icon_url})
     channels.append(channel)
 
+    # Add all programs, regardless of date
     for program in channel_data.get("epg", []):
         programme_date = program.get("programmeDate", "").replace("-", "")
+
         start_time = program.get("startTime", "000000")
         stop_time = program.get("stopTime", "235959")
         program_id = str(program.get("id", "TBA"))
-
-        # Convert to datetime object
-        programme_date_obj = datetime.strptime(programme_date, "%Y%m%d")
-        today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
-
-        # Allow programs that end exactly at midnight today
-        if programme_date_obj < today_start and stop_time == "000000":
-            pass  # Keep the program
-        elif programme_date != now.strftime('%Y%m%d'):
-            continue  # Skip if not today's program
 
         start = programme_date + start_time.replace(":", "") + " +0545"
         stop = programme_date + stop_time.replace(":", "") + " +0545"
@@ -102,6 +95,7 @@ for channel_data in epg_data:
 
         programmes.append(programme)
 
+# Append channels and programs to XML
 for element in channels + programmes:
     tv.append(element)
 
@@ -116,4 +110,5 @@ with open("gotv.xml", "w", encoding="utf-8") as xml_file:
 with gzip.open("gotv.xml.gz", "wt", encoding="utf-8") as gz_file:
     gz_file.write(pretty_xml)
 
+print(f"EPG Data fetched for {now.strftime('%Y-%m-%d %H:%M:%S')} (Kathmandu Time)")
 print("XML and compressed XML files saved successfully as gotv.xml and gotv.xml.gz.")

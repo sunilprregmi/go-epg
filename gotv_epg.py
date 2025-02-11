@@ -26,9 +26,19 @@ payload = {
 headers = {"Authorization": "Bearer null", "User-Agent": "okhttp/4.10.0"}
 
 # Fetch data
-epg_data = requests.post(epg_url, data=payload, headers=headers).json().get("data", [])
-genre_data = requests.post(genre_url, data=payload, headers=headers).json()
-genre_mapping = {str(d["id"]): d["name"] for d in genre_data["data"][0]["genreDetails"].values()}
+try:
+    epg_response = requests.post(epg_url, data=payload, headers=headers)
+    genre_response = requests.post(genre_url, data=payload, headers=headers)
+
+    epg_response.raise_for_status()
+    genre_response.raise_for_status()
+
+    epg_data = epg_response.json().get("data", [])
+    genre_data = genre_response.json()
+    genre_mapping = {str(d["id"]): d["name"] for d in genre_data["data"][0]["genreDetails"].values()}
+except requests.exceptions.RequestException as e:
+    print(f"Error fetching data: {e}")
+    exit(1)
 
 # Sanitization function
 def sanitize_text(text):
@@ -55,14 +65,19 @@ for channel_data in epg_data:
 
     for program in channel_data.get("epg", []):
         programme_date = program.get("programmeDate", "").replace("-", "")
-
-        # Skip programs that are not for today
-        if programme_date != now.strftime('%Y%m%d'):
-            continue  
-
         start_time = program.get("startTime", "000000")
         stop_time = program.get("stopTime", "235959")
         program_id = str(program.get("id", "TBA"))
+
+        # Convert to datetime object
+        programme_date_obj = datetime.strptime(programme_date, "%Y%m%d")
+        today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
+
+        # Allow programs that end exactly at midnight today
+        if programme_date_obj < today_start and stop_time == "000000":
+            pass  # Keep the program
+        elif programme_date != now.strftime('%Y%m%d'):
+            continue  # Skip if not today's program
 
         start = programme_date + start_time.replace(":", "") + " +0545"
         stop = programme_date + stop_time.replace(":", "") + " +0545"

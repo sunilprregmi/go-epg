@@ -9932,6 +9932,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO3f71af05e208_px0219451//thumbnail.png"/>
         <category>Nepali</category>
     </programme>
+    <programme start="20250210223000 +0545" stop="20250210003000 +0545" channel="21" catchup-id="11773300">
+        <title>Sony Ten1 HD</title>
+        <desc>Professional wrestlers go head-to-head against each other in a popular WWE event where they put their strengths to use to win various competitions.</desc>
+        <sub-title>WWE Super Dhamaal</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOea7f32faab30_px0219286//thumbnail.png"/>
+        <category>Sports</category>
+    </programme>
     <programme start="20250211003000 +0545" stop="20250211010000 +0545" channel="21" catchup-id="11830310">
         <title>Sony Ten1 HD</title>
         <desc>In the 1st ODI of 2025 between Pakistan and New Zealand, fans witnessed thrilling moments as both teams showcased their skills.</desc>
@@ -10028,6 +10035,13 @@
         <desc>Dont miss this action-packed live event show featuring the superstars of the WWE who showcase entertaining matches that will get you hooked forever.</desc>
         <sub-title>WWE RAW</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOea7f32faab30_px0219286//thumbnail.png"/>
+        <category>Sports</category>
+    </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="46" catchup-id="11774103">
+        <title>Sony Ten2 HD</title>
+        <desc>Get insights and highlights from the Europa League and Conference League.</desc>
+        <sub-title>UELUECL 2024-25 Magazine Programme</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO5622bfa795b9_px0219288//thumbnail.png"/>
         <category>Sports</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211003000 +0545" channel="46" catchup-id="11830442">
@@ -10184,6 +10198,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO5622bfa795b9_px0219288//thumbnail.png"/>
         <category>Sports</category>
     </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="38" catchup-id="11774464">
+        <title>Sony Ten3 HD</title>
+        <desc>Watch the telecast of adrenaline-charged WWE wrestling tournaments. Worlds best wrestlers compete to win the coveted title.</desc>
+        <sub-title>WWE SmackDown</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO84aa7ccda405_px0219287//thumbnail.png"/>
+        <category>Sports</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211040000 +0545" channel="38" catchup-id="11830617">
         <title>Sony Ten3 HD</title>
         <desc>UFC 312 is back with Du Plessis vs Strickland 2 Witness the action-packed fight between these two legends. Dont miss the epic showdown-watch it live now</desc>
@@ -10266,6 +10287,13 @@
         <desc>Get ready for UFC Fight OClock with Khabib Watch the legendary fighter in action and relive his greatest fights. Dont miss a second-tune in now</desc>
         <sub-title>UFC Fight OClock KHABIB</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO84aa7ccda405_px0219287//thumbnail.png"/>
+        <category>Sports</category>
+    </programme>
+    <programme start="20250210230000 +0545" stop="20250210010000 +0545" channel="19" catchup-id="11774712">
+        <title>Sony Six HD</title>
+        <desc>Catch the exciting highlights of the 2nd ODI match between Sri Lanka and India from 2008. Relive the thrilling moments and stunning plays that made the game unforgettable</desc>
+        <sub-title>Sri Lanka v India 2008 - 2nd ODI Highlights</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO5760909ef834_px0219286//thumbnail.png"/>
         <category>Sports</category>
     </programme>
     <programme start="20250211010000 +0545" stop="20250211013000 +0545" channel="19" catchup-id="11830745">
@@ -10448,6 +10476,13 @@
         <desc>Catch the exciting highlights of the 3rd ODI match between Sri Lanka and India from 2008. Relive the thrilling moments and stunning plays that made the game unforgettable</desc>
         <sub-title>Sri Lanka v India 2008 - 3rd ODI Highlights</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO5760909ef834_px0219286//thumbnail.png"/>
+        <category>Sports</category>
+    </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="37" catchup-id="11775393">
+        <title>A Sports HD</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO6361de8651b6_px0219284//thumbnail.png"/>
         <category>Sports</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="37" catchup-id="11830919">
@@ -10786,6 +10821,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO4ee5ee2f5e04_px0219447//thumbnail.png"/>
         <category>Sports</category>
     </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="189" catchup-id="11827548">
+        <title>PTV Sports</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO55c31baa52eb_px0219285//thumbnail.png"/>
+        <category>Sports</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="189" catchup-id="11861301">
         <title>PTV Sports</title>
         <desc>TBA</desc>
@@ -10953,6 +10995,13 @@
         <sub-title>Event</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO55c31baa52eb_px0219285//thumbnail.png"/>
         <category>Sports</category>
+    </programme>
+    <programme start="20250210221000 +0545" stop="20250210002000 +0545" channel="42" catchup-id="11776161">
+        <title>Sony</title>
+        <desc>Best Crime Patrol episodes dive into real-life crime cases, showcasing gripping stories that highlight the complexities of criminal investigations and the impact on victims and their families.</desc>
+        <sub-title>Best of Crime Patrol - Crime Patrol Satark</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO484a901648e5_px0219287//thumbnail.png"/>
+        <category>Entertainment</category>
     </programme>
     <programme start="20250211002000 +0545" stop="20250211013000 +0545" channel="42" catchup-id="11831303">
         <title>Sony</title>
@@ -11304,6 +11353,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO5f4202010209_px0219289//thumbnail.png"/>
         <category>Entertainment</category>
     </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="47" catchup-id="11776905">
+        <title>And TV HD</title>
+        <desc>Housewives from the community enjoy the attention of each others husbands.</desc>
+        <sub-title>Bhabi Ji Ghar Par Hai</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOb11ddb30a189_px0219288//thumbnail.png"/>
+        <category>Entertainment</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211003000 +0545" channel="47" catchup-id="11831666">
         <title>And TV HD</title>
         <desc>Housewives from the community enjoy the attention of each others husbands.</desc>
@@ -11507,6 +11563,20 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOb11ddb30a189_px0219288//thumbnail.png"/>
         <category>Entertainment</category>
     </programme>
+    <programme start="20250210225900 +0545" stop="20250210003900 +0545" channel="8" catchup-id="11777285">
+        <title>Colors SD</title>
+        <desc>A mouthwatering mix of celebrity charm, culinary prowess, and comedic flair Six dynamic couples bring laughter and flavor to the kitchen stage in this delightful non-fiction extravaganza.</desc>
+        <sub-title>Laughter Chefs Unlimited Entertainment</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO58b31c1e0241_px0219285//thumbnail.png"/>
+        <category>Entertainment</category>
+    </programme>
+    <programme start="20250210003900 +0545" stop="20250210060000 +0545" channel="8" catchup-id="11777285">
+        <title>Programme Info Not Available</title>
+        <desc>Programme Info Not Available</desc>
+        <sub-title>Programme Info Not Available</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO58b31c1e0241_px0219285//thumbnail.png"/>
+        <category>Entertainment</category>
+    </programme>
     <programme start="20250211060000 +0545" stop="20250211063000 +0545" channel="8" catchup-id="11831865">
         <title>Colors SD</title>
         <desc>Two best friends find themselves in a tricky situation when they both fall for the same guy. Together, they navigate this love triangle while supporting each other through it all.</desc>
@@ -11617,6 +11687,13 @@
         <desc>A mouthwatering mix of celebrity charm, culinary prowess, and comedic flair Six dynamic couples bring laughter and flavor to the kitchen stage in this delightful non-fiction extravaganza.</desc>
         <sub-title>Laughter Chefs Unlimited Entertainment</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO58b31c1e0241_px0219285//thumbnail.png"/>
+        <category>Entertainment</category>
+    </programme>
+    <programme start="20250210233000 +0545" stop="20250210000000 +0545" channel="137" catchup-id="11777634">
+        <title>SAB</title>
+        <desc>Jethalal finds himself in the midst of another crisis at Gokuldham.</desc>
+        <sub-title>Taarak Mehta Ka Ooltah Chashmah</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO5c315bf08438_px0219446//thumbnail.png"/>
         <category>Entertainment</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211003000 +0545" channel="137" catchup-id="11831990">
@@ -11946,6 +12023,13 @@
         <desc>Residents of a housing society come together to solve common issues. Watch how unity leads to effective solutions in challenging situations.</desc>
         <sub-title>Taarak Mehta Ka Ooltah Chashmah</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO5c315bf08438_px0219446//thumbnail.png"/>
+        <category>Entertainment</category>
+    </programme>
+    <programme start="20250210220000 +0545" stop="20250210000000 +0545" channel="127" catchup-id="11778126">
+        <title>risteysd</title>
+        <desc>Balika Vadhu very sensitively portrays the plight of children who are unwittingly forced into marriage, in the name of tradition, and have to bear the repercussions for the rest of their lives.</desc>
+        <sub-title>Balika Vadhu</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOb9c2df279aa7_px0219449//thumbnail.png"/>
         <category>Entertainment</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211023000 +0545" channel="127" catchup-id="11832321">
@@ -12522,6 +12606,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO75fb122d0db6_px0219446//thumbnail.png"/>
         <category>Entertainment</category>
     </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="168" catchup-id="11824415">
+        <title>Anjan</title>
+        <desc>Forget old-school cooking, its time for some new-age kitchen magic Dive into our Chulha Chowkha series for cooking tips that are fun, easy, and game-changing. Lets cook up a storm</desc>
+        <sub-title>Chulha Chouka</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOb33e8dfeb1e9_px0219313//thumbnail.png"/>
+        <category>Entertainment</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="168" catchup-id="11858154">
         <title>Anjan</title>
         <desc>Neha, an aspiring actress, navigates the ups and downs of fame in this mini-series. Join her on a journey of trials and triumphs in the entertainment industry.</desc>
@@ -12788,6 +12879,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOb33e8dfeb1e9_px0219313//thumbnail.png"/>
         <category>Entertainment</category>
     </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="72" catchup-id="11780951">
+        <title>Sony Pal</title>
+        <desc>Join ACP Pradyuman, Daya, and Abhijeet as they crack thrilling cases, with a little help from the brilliant Dr. Salunkhe. Crime-fighting fun awaits</desc>
+        <sub-title>CID</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO0c7d2e8c96d9_px0219450//thumbnail.png"/>
+        <category>Entertainment</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211002300 +0545" channel="72" catchup-id="11833418">
         <title>Sony Pal</title>
         <desc>In a lively housing society, residents band together to face everyday challenges, forging friendships and discovering the power of community while navigating their ups and downs.</desc>
@@ -13040,6 +13138,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO0c7d2e8c96d9_px0219450//thumbnail.png"/>
         <category>Entertainment</category>
     </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="71" catchup-id="11820707">
+        <title>Dangal</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO8421eb2cfa0b_px0219450//thumbnail.png"/>
+        <category>Entertainment</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="71" catchup-id="11854698">
         <title>Dangal</title>
         <desc>TBA</desc>
@@ -13206,6 +13311,13 @@
         <desc>TBA</desc>
         <sub-title>Event</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO8421eb2cfa0b_px0219450//thumbnail.png"/>
+        <category>Entertainment</category>
+    </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="103" catchup-id="11781928">
+        <title>Zee Anmol</title>
+        <desc>Fear Files - Darr Ki Sacchi Tasveerin is a Hindi horror series featuring spine-chilling real-life paranormal stories and investigations of eerie events from across India. Get ready to be spooked</desc>
+        <sub-title>Fear Files - Darr Ki Sacchi Tasveerein S02</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO4480898f763f_px0219451//thumbnail.png"/>
         <category>Entertainment</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="103" catchup-id="11833867">
@@ -13383,6 +13495,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO4480898f763f_px0219451//thumbnail.png"/>
         <category>Entertainment</category>
     </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="120" catchup-id="11787519">
+        <title>Dubaione</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO46fc5c4d9cc3_px0219449//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="120" catchup-id="11836427">
         <title>Dubaione</title>
         <desc>TBA</desc>
@@ -13550,6 +13669,13 @@
         <sub-title>Event</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO46fc5c4d9cc3_px0219449//thumbnail.png"/>
         <category>Movies</category>
+    </programme>
+    <programme start="20250210224900 +0545" stop="20250210000000 +0545" channel="48" catchup-id="11782293">
+        <title>Discovery HD</title>
+        <desc>Title Boiling For A Fight Temperatures rise during a two-step water purification challenge. Kys loyalty is tested. A shocking big-game kill tips the balance of power.</desc>
+        <sub-title>Naked And Afraid Last One Standing S02</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GObb24c3fd9922_px0219288//thumbnail.png"/>
+        <category>Infotainment</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="48" catchup-id="11834038">
         <title>Discovery HD</title>
@@ -13768,6 +13894,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GObb24c3fd9922_px0219288//thumbnail.png"/>
         <category>Infotainment</category>
     </programme>
+    <programme start="20250210231200 +0545" stop="20250210000200 +0545" channel="39" catchup-id="11782717">
+        <title>Animal Planet HD</title>
+        <desc>This episode breaks down wildlife battles moment by moment, revealing super slow-motion moments of unseen bravery between the prize-fighters.</desc>
+        <sub-title>Gladiators</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO83889cb4d31c_px0219287//thumbnail.png"/>
+        <category>Infotainment</category>
+    </programme>
     <programme start="20250211000200 +0545" stop="20250211005400 +0545" channel="39" catchup-id="11834249">
         <title>Animal Planet HD</title>
         <desc>Following the lions for the first five years of their lives, uncover fascinating insights into the lives of these majestic animals, while highlighting threats such as poaching and habitat loss.</desc>
@@ -13962,6 +14095,20 @@
         <desc>Max the camel faces new challenges as he ages</desc>
         <sub-title>The Zoo</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO83889cb4d31c_px0219287//thumbnail.png"/>
+        <category>Infotainment</category>
+    </programme>
+    <programme start="20250210220000 +0545" stop="20250210020000 +0545" channel="116" catchup-id="11783230">
+        <title>TLC HD</title>
+        <desc>Programming To Be Announced</desc>
+        <sub-title>TBA</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO78bb8ea694bf_px0219449//thumbnail.png"/>
+        <category>Infotainment</category>
+    </programme>
+    <programme start="20250210020000 +0545" stop="20250210000300 +0545" channel="116" catchup-id="11783230">
+        <title>Programme Info Not Available</title>
+        <desc>Programme Info Not Available</desc>
+        <sub-title>Programme Info Not Available</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO78bb8ea694bf_px0219449//thumbnail.png"/>
         <category>Infotainment</category>
     </programme>
     <programme start="20250211000300 +0545" stop="20250211010200 +0545" channel="116" catchup-id="11863213">
@@ -14165,6 +14312,13 @@
         <desc>Title Dead Last 90 Day The Last Resort</desc>
         <sub-title>90 Day The Last Resort</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO78bb8ea694bf_px0219449//thumbnail.png"/>
+        <category>Infotainment</category>
+    </programme>
+    <programme start="20250210234200 +0545" stop="20250210003400 +0545" channel="138" catchup-id="11783579">
+        <title>BBC Earth</title>
+        <desc>Title Episode 1 Alaska Comedian Sue Perkins and adventurer Charley Boorman travel across Alaska to the notorious Dalton Highway - a dirt track built in the 1970s as a supply road to support the Trans-Alaska oil pipeline.</desc>
+        <sub-title>Worlds Most Dangerous Roads S1</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOd795db1791a9_px0219449//thumbnail.png"/>
         <category>Infotainment</category>
     </programme>
     <programme start="20250211003400 +0545" stop="20250211012300 +0545" channel="138" catchup-id="11834651">
@@ -14384,6 +14538,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOd795db1791a9_px0219449//thumbnail.png"/>
         <category>Infotainment</category>
     </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="34" catchup-id="11784217">
+        <title>Discovery Science</title>
+        <desc>Join Jeremy Wade as he dives into puzzling underwater mysteries in his show</desc>
+        <sub-title>Mysteries Of The Deep</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO7324309d0103_px0219284//thumbnail.png"/>
+        <category>Infotainment</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="34" catchup-id="11834890">
         <title>Discovery Science</title>
         <desc>Tory Belleci and Streetbike Tommy go behind-the-scenes at one of the worlds largest fireworks companies to reveal the explosive secrets.</desc>
@@ -14557,6 +14718,20 @@
         <desc>From giant burning gas spheres to icy orphaned worlds wandering in interstellar space, explore the strange planets that inhabit the vast spread of the universe.</desc>
         <sub-title>How The Universe Works</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO7324309d0103_px0219284//thumbnail.png"/>
+        <category>Infotainment</category>
+    </programme>
+    <programme start="20250210230000 +0545" stop="20250210235100 +0545" channel="36" catchup-id="11784574">
+        <title>Discovery Turbo</title>
+        <desc>When people look out at Andys junkyard all they see is junk, but he sees possibilities. With the junkyard filled, Andys on the hunt for new ways to move parts.</desc>
+        <sub-title>Junkyard Empire</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO775a7b370dde_px0219284//thumbnail.png"/>
+        <category>Infotainment</category>
+    </programme>
+    <programme start="20250210235100 +0545" stop="20250210000000 +0545" channel="36" catchup-id="11784575">
+        <title>Discovery Turbo</title>
+        <desc>Martha nabs 62 Chevy Greenbriar for restoration, JD tackles Camaro, Ashs Suzuki Jigster challenges.</desc>
+        <sub-title>Dallas Car Sharks</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO775a7b370dde_px0219284//thumbnail.png"/>
         <category>Infotainment</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211002100 +0545" channel="36" catchup-id="11835075">
@@ -14810,6 +14985,13 @@
         <sub-title>Junkyard Empire S05</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO775a7b370dde_px0219284//thumbnail.png"/>
         <category>Infotainment</category>
+    </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="115" catchup-id="11787903">
+        <title>Inplus</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOf7160158282d_px0219449//thumbnail.png"/>
+        <category>Movies</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="115" catchup-id="11836619">
         <title>Inplus</title>
@@ -15145,6 +15327,20 @@
         <desc>TBA</desc>
         <sub-title>Programme</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO78ae094e3933_px0219450//thumbnail.png"/>
+        <category>Infotainment</category>
+    </programme>
+    <programme start="20250210234500 +0545" stop="20250210002700 +0545" channel="61" catchup-id="11785867">
+        <title>HistoryTv HD</title>
+        <desc>Pawn Stars - Out and About S01</desc>
+        <sub-title>Pawn Stars - Out About S01</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO64e58d9b3bff_px0219446//thumbnail.png"/>
+        <category>Infotainment</category>
+    </programme>
+    <programme start="20250210002700 +0545" stop="20250210000000 +0545" channel="61" catchup-id="11785867">
+        <title>Programme Info Not Available</title>
+        <desc>Programme Info Not Available</desc>
+        <sub-title>Programme Info Not Available</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO64e58d9b3bff_px0219446//thumbnail.png"/>
         <category>Infotainment</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211002700 +0545" channel="61" catchup-id="11835507">
@@ -15804,6 +16000,13 @@
         <sub-title>Programme</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOaf953dc0c4c8_px0219450//thumbnail.png"/>
         <category>Entertainment</category>
+    </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="84" catchup-id="11823249">
+        <title>TVE Asia</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOf9cc6c41d9ce_px0219450//thumbnail.png"/>
+        <category>Infotainment</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="84" catchup-id="11857002">
         <title>TVE Asia</title>
@@ -16477,6 +16680,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO22ee03d13660_px0219451//thumbnail.png"/>
         <category>Entertainment</category>
     </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="193" catchup-id="11827164">
+        <title>CGTN Documentary</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO7bcbd29e7b38_px0219448//thumbnail.png"/>
+        <category>Infotainment</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="193" catchup-id="11860917">
         <title>CGTN Documentary</title>
         <desc>TBA</desc>
@@ -16813,6 +17023,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO40c6364b8e68_px0219449//thumbnail.png"/>
         <category>Kids</category>
     </programme>
+    <programme start="20250210225100 +0545" stop="20250210003500 +0545" channel="15" catchup-id="11829446">
+        <title>Sony PIX</title>
+        <desc>Captain Artemis and her soldiers are pulled into a world where dangerous monsters and humans co-exist. They must escape with the help from a hunter. Release Year 2020 Director Paul W.S. Anderson Awards Milla Jovovich and Tony Jaa in Monster Hunter 2020 - 2021 Nominee SFCS Award - Best Action Choreography</desc>
+        <sub-title>Monster Hunter</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO644b8260df37_px0219285//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
     <programme start="20250211003500 +0545" stop="20250211021700 +0545" channel="15" catchup-id="11837195">
         <title>Sony PIX</title>
         <desc>The German army gain the upper hand over the British, French and Belguim army during a dreadful battle in World War II. Cast Fionn Whitehead, Barry Keoghan, Mark Rylance. Director Christopher Nolan. Release Year 2017 Director Christopher Nolan Awards 66 wins and 236 nominations total</desc>
@@ -17072,6 +17289,20 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO237cfa2016fd_px0219447//thumbnail.png"/>
         <category>Movies</category>
     </programme>
+    <programme start="20250210224700 +0545" stop="20250210012500 +0545" channel="52" catchup-id="11829508">
+        <title>Sony Max HD</title>
+        <desc>Munna Bhai M.B.B.S</desc>
+        <sub-title>Munna Bhai M.B.B.S</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO9744e26ee7c2_px0219289//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
+    <programme start="20250210012500 +0545" stop="20250210011600 +0545" channel="52" catchup-id="11829508">
+        <title>Programme Info Not Available</title>
+        <desc>Programme Info Not Available</desc>
+        <sub-title>Programme Info Not Available</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO9744e26ee7c2_px0219289//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
     <programme start="20250211011600 +0545" stop="20250211031800 +0545" channel="52" catchup-id="11837448">
         <title>Sony Max HD</title>
         <desc>A charming flirt who has never been in a serious relationship with anyone finds himself in unfamiliar territory when he finally falls in love with a woman.</desc>
@@ -17170,6 +17401,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO9744e26ee7c2_px0219289//thumbnail.png"/>
         <category>Movies</category>
     </programme>
+    <programme start="20250210230600 +0545" stop="20250210012300 +0545" channel="23" catchup-id="11789933">
+        <title>Zee Cinema HD</title>
+        <desc>When Chai finds out that Meera loves Siddharth, he does everything in his power to unite them, even though he is in love with her.</desc>
+        <sub-title>Daringbaaz 3</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOdaa7b45592dc_px0219286//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
     <programme start="20250211012300 +0545" stop="20250211033100 +0545" channel="23" catchup-id="11837511">
         <title>Zee Cinema HD</title>
         <desc>Pippa</desc>
@@ -17254,6 +17492,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOdaa7b45592dc_px0219286//thumbnail.png"/>
         <category>Movies</category>
     </programme>
+    <programme start="20250210223000 +0545" stop="20250210004900 +0545" channel="51" catchup-id="11790189">
+        <title>ANDPICTHD</title>
+        <desc>Arun, a newly appointed police sub-inspector, goes after a notorious serial killer who targets teenage girls. However, his mission soon comes at a terrible price.</desc>
+        <sub-title>Gumnaam</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO4cb3da598178_px0219289//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
     <programme start="20250211004900 +0545" stop="20250211032900 +0545" channel="51" catchup-id="11837575">
         <title>ANDPICTHD</title>
         <desc>After serving time for killing her abusive father, Shabana is recruited by an Indian spy agency for a highly classified mission. Release Year 2017 Director Shivam Nair Awards 2018 Winner Special Award- Extraordinary Impact ActreSS- Taapsee Pannu</desc>
@@ -17322,6 +17567,13 @@
         <desc>Three friends meet Ragini in a small town, realizing she brings trouble. Release Year 2016 Director Indra Kumar</desc>
         <sub-title>Great Grand Masti</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO4cb3da598178_px0219289//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
+    <programme start="20250210215700 +0545" stop="20250210003300 +0545" channel="31" catchup-id="11790255">
+        <title>Colors Cineplex</title>
+        <desc>Rocketry The Nambi Effect</desc>
+        <sub-title>Rocketry The Nambi Effect</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO40251e059e51_px0219284//thumbnail.png"/>
         <category>Movies</category>
     </programme>
     <programme start="20250211003300 +0545" stop="20250211024000 +0545" channel="31" catchup-id="11837636">
@@ -17408,6 +17660,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO40251e059e51_px0219284//thumbnail.png"/>
         <category>Movies</category>
     </programme>
+    <programme start="20250210224600 +0545" stop="20250210012800 +0545" channel="59" catchup-id="11790319">
+        <title>Goldmines</title>
+        <desc>Raja is killed by a goon, and Bullet fights death to return for revenge.</desc>
+        <sub-title>Jeene Nahi Doonga</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOc92d39225ed1_px0219446//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
     <programme start="20250211012800 +0545" stop="20250211033300 +0545" channel="59" catchup-id="11863420">
         <title>Goldmines</title>
         <desc>BHOOMI HIGHLY RESPECTS MUTHURAMALINGAM AND HIS DAUGHTER MEERA. WHILE APPOINTED AS MEERAS BODYGUARD, HE FALLS IN LOVE WITH A GIRL HE HAS NEVER MET, UNAWARE THAT SHE IS NONE OTHER THAN MEERA.</desc>
@@ -17469,6 +17728,13 @@
         <desc>KAVYA, A RICH GIRL, GOES TO A RESTRICTED AREA IN ANDAMAN TO CELEBRATE THE NEW YEAR WITH HER FRIENDS. WHILE EVADING THE FOREST OFFICERS IN THE JUNGLE, SHE KNOCKS JARA, A TRIBAL MAN, WITH HER CAR.</desc>
         <sub-title>Tarzan The Heman</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOc92d39225ed1_px0219446//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
+    <programme start="20250210223400 +0545" stop="20250210005800 +0545" channel="17" catchup-id="11829569">
+        <title>Sony MAX 2</title>
+        <desc>Anita and her friends visit the old mansion belonging to her uncle unaware of the horror lurking there. Release Year 1989 Director Shyam Ramsay, Tulsi Ramsay</desc>
+        <sub-title>Purani Haveli</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOc684703ecf88_px0219285//thumbnail.png"/>
         <category>Movies</category>
     </programme>
     <programme start="20250211005800 +0545" stop="20250211032700 +0545" channel="17" catchup-id="11837768">
@@ -17574,6 +17840,13 @@
         <desc>Veerendra Pratap creates a rift between Laxmis sons to take her business. Release Year 1993 Director K. Pappu</desc>
         <sub-title>Izzat Ki Roti</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOc684703ecf88_px0219285//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
+    <programme start="20250210232600 +0545" stop="20250210014800 +0545" channel="129" catchup-id="11829629">
+        <title>Zee Bollywood</title>
+        <desc>While planning and executing one of their biggest heists, the members of a criminal family come across some shocking revelations. Thus, their relationships and loyalties are critically tested. Release Year 2018 Director Remo DSouza Awards 2 win and 1 nomination</desc>
+        <sub-title>Race 3</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOce36f29b134c_px0219448//thumbnail.png"/>
         <category>Movies</category>
     </programme>
     <programme start="20250211014800 +0545" stop="20250211035200 +0545" channel="129" catchup-id="11863482">
@@ -17793,6 +18066,27 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO2bad033222db_px0219284//thumbnail.png"/>
         <category>Movies</category>
     </programme>
+    <programme start="20250212000000 +0545" stop="20250212010000 +0545" channel="27" catchup-id="11837911">
+        <title>B4U Movies</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO2bad033222db_px0219284//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
+    <programme start="20250212010000 +0545" stop="20250212020000 +0545" channel="27" catchup-id="11837912">
+        <title>B4U Movies</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO2bad033222db_px0219284//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
+    <programme start="20250210224300 +0545" stop="20250210010700 +0545" channel="30" catchup-id="11791268">
+        <title>Zee Action</title>
+        <desc>Focuses on Gates interest in improving sanitation in developing countries and introduces the Omni Processor, which converts waste into clean water.</desc>
+        <sub-title>Bill Gates</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOc92d39225ed1_px0219446//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
     <programme start="20250211010700 +0545" stop="20250211020700 +0545" channel="30" catchup-id="11838079">
         <title>Zee Action</title>
         <desc>Discover a variety of products and enjoy easy shopping from home. Perfect for those who prefer shopping without leaving their house. Tune in for convenience.</desc>
@@ -17868,6 +18162,13 @@
         <desc>People in a village are terrified to come out of their homes after 6 p.m. since all those who venture out get killed.</desc>
         <sub-title>Six</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOc92d39225ed1_px0219446//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="63" catchup-id="11822865">
+        <title>BFlix Movies</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO19847d1dd1e3_px0219446//thumbnail.png"/>
         <category>Movies</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="63" catchup-id="11856618">
@@ -18036,6 +18337,13 @@
         <desc>TBA</desc>
         <sub-title>Event</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO19847d1dd1e3_px0219446//thumbnail.png"/>
+        <category>Movies</category>
+    </programme>
+    <programme start="20250210225000 +0545" stop="20250210011100 +0545" channel="106" catchup-id="11829685">
+        <title>Zee Classic</title>
+        <desc>Kishan develops an enmity with Thakur Dayalu and a corrupt police officer. After framing him for a murder, Dayalu and his men intend to harm his wife. Release Year 1989 Director Vijay Reddy</desc>
+        <sub-title>Main Tera Dushman</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO1e9202ffd24d_px0219451//thumbnail.png"/>
         <category>Movies</category>
     </programme>
     <programme start="20250211011100 +0545" stop="20250211031400 +0545" channel="106" catchup-id="11863538">
@@ -18269,6 +18577,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOb5546fed29a3_px0219451//thumbnail.png"/>
         <category>Movies</category>
     </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="109" catchup-id="11820454">
+        <title>Hi Dost</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOd02174f7ba64_px0219451//thumbnail.png"/>
+        <category>Entertainment</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="109" catchup-id="11854506">
         <title>Hi Dost</title>
         <desc>TBA</desc>
@@ -18436,6 +18751,13 @@
         <sub-title>Event</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOd02174f7ba64_px0219451//thumbnail.png"/>
         <category>Entertainment</category>
+    </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="112" catchup-id="11823057">
+        <title>Bhojpuri Cinema</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOb1dc08e280f8_px0219449//thumbnail.png"/>
+        <category>Movies</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="112" catchup-id="11856810">
         <title>Bhojpuri Cinema</title>
@@ -18773,6 +19095,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOd0ea3e3bc362_px0219314//thumbnail.png"/>
         <category>Movies</category>
     </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="143" catchup-id="11793311">
+        <title>Vh1</title>
+        <desc>Stream top K-pop hits and watch short anime clips in this entertaining compilation.</desc>
+        <sub-title>Vh1 K-poppd Ani Nation</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOef22cc37156b_px0219448//thumbnail.png"/>
+        <category>Music</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211060000 +0545" channel="143" catchup-id="11838972">
         <title>Vh1</title>
         <desc>Experience eclectic music videos, interviews, and performances across genres in a late-night program. Tune in</desc>
@@ -18883,6 +19212,13 @@
         <desc>Stream top K-pop hits and watch short anime clips in this entertaining compilation.</desc>
         <sub-title>Vh1 K-poppd Ani Nation</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOef22cc37156b_px0219448//thumbnail.png"/>
+        <category>Music</category>
+    </programme>
+    <programme start="20250210233000 +0545" stop="20250210000000 +0545" channel="24" catchup-id="11828315">
+        <title>MTV</title>
+        <desc>Watch the journey of the contestants untill now as they fight it out in Roadies Hell Down Under.</desc>
+        <sub-title>Roadies S20</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO215d060f2d6a_px0219286//thumbnail.png"/>
         <category>Music</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211003000 +0545" channel="24" catchup-id="11862069">
@@ -19242,6 +19578,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO1a5e6fe61e48_px0219449//thumbnail.png"/>
         <category>Music</category>
     </programme>
+    <programme start="20250210220000 +0545" stop="20250210000000 +0545" channel="16" catchup-id="11793906">
+        <title>Zoom</title>
+        <desc>An entertainment program featuring games, celebrity guests, and a fun-filled atmosphere. Viewers can relax and enjoy the lively segments, providing them with the perfect entertainment escape.</desc>
+        <sub-title>Beetey Lamhey</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO7d6dcd81efd3_px0219285//thumbnail.png"/>
+        <category>Music</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211020000 +0545" channel="16" catchup-id="11839184">
         <title>Zoom</title>
         <desc>A fun collection of iconic love songs by famous artists youll adore</desc>
@@ -19338,6 +19681,13 @@
         <desc>An entertainment program featuring games, celebrity guests, and a fun-filled atmosphere. Viewers can relax and enjoy the lively segments, providing them with the perfect entertainment escape.</desc>
         <sub-title>Beetey Lamhey</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO7d6dcd81efd3_px0219285//thumbnail.png"/>
+        <category>Music</category>
+    </programme>
+    <programme start="20250210230000 +0545" stop="20250210011400 +0545" channel="14" catchup-id="11794208">
+        <title>ZING</title>
+        <desc>Dive into captivating, real-life inspired tales that uncover the mysterious world of paranormal phenomena. Get ready for thrilling stories that will keep you on the edge of your seat</desc>
+        <sub-title>Fear Files</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO59759fc07bb1_px0219285//thumbnail.png"/>
         <category>Music</category>
     </programme>
     <programme start="20250211011400 +0545" stop="20250211020000 +0545" channel="14" catchup-id="11839285">
@@ -20166,6 +20516,20 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOcf6d54620f37_px0219313//thumbnail.png"/>
         <category>Music</category>
     </programme>
+    <programme start="20250210234500 +0545" stop="20250210235600 +0545" channel="12" catchup-id="11796160">
+        <title>Discovery Kids</title>
+        <desc>Krish, blessed by Lord Vishnu, battles the evil principal Kanishk.</desc>
+        <sub-title>Kris Roll No 21</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOaf4183ea493b_px0219285//thumbnail.png"/>
+        <category>Kids</category>
+    </programme>
+    <programme start="20250210235600 +0545" stop="20250210000800 +0545" channel="12" catchup-id="11796161">
+        <title>Discovery Kids</title>
+        <desc>Krish, blessed by Lord Vishnu, battles the evil principal Kanishk.</desc>
+        <sub-title>Kris Roll No 21</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOaf4183ea493b_px0219285//thumbnail.png"/>
+        <category>Kids</category>
+    </programme>
     <programme start="20250211000800 +0545" stop="20250211001800 +0545" channel="12" catchup-id="11840201">
         <title>Discovery Kids</title>
         <desc>Krish, blessed by Lord Vishnu, battles the evil principal Kanishk.</desc>
@@ -20964,6 +21328,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOc6d83f39d540_px0219285//thumbnail.png"/>
         <category>Kids</category>
     </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="28" catchup-id="11797324">
+        <title>Nick</title>
+        <desc>Motu and Patlu are best friends and live in Furfuri Nagar. Patlu helps them get out of the various comical situations they end up in.</desc>
+        <sub-title>Motu Patlu</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOd2037c634eb9_px0219284//thumbnail.png"/>
+        <category>Kids</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="28" catchup-id="11841051">
         <title>Nick</title>
         <desc>Motu and Patlu are best friends and live in Furfuri Nagar. Patlu helps them get out of the various comical situations they end up in.</desc>
@@ -21081,6 +21452,20 @@
         <desc>Motu and Patlu are best friends and live in Furfuri Nagar. Patlu helps them get out of the various comical situations they end up in.</desc>
         <sub-title>Motu Patlu</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOd2037c634eb9_px0219284//thumbnail.png"/>
+        <category>Kids</category>
+    </programme>
+    <programme start="20250210233600 +0545" stop="20250210235400 +0545" channel="29" catchup-id="11797744">
+        <title>Sony Yay</title>
+        <desc>Naruto, an adolescent ninja, dreams of becoming the Hokage in his village.</desc>
+        <sub-title>Naruto</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOcee2abd8ebce_px0219284//thumbnail.png"/>
+        <category>Kids</category>
+    </programme>
+    <programme start="20250210235400 +0545" stop="20250210000400 +0545" channel="29" catchup-id="11797745">
+        <title>Sony Yay</title>
+        <desc>Bhoot Boss and his assistants land on Earth to restore order using their Paap-o-meter amid a chaotic situation.</desc>
+        <sub-title>Paap O Meter</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOcee2abd8ebce_px0219284//thumbnail.png"/>
         <category>Kids</category>
     </programme>
     <programme start="20250211000400 +0545" stop="20250211001500 +0545" channel="29" catchup-id="11841166">
@@ -22152,6 +22537,13 @@
         <desc>TBA</desc>
         <sub-title>Programme</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOaf4183ea493b_px0219285//thumbnail.png"/>
+        <category>Kids</category>
+    </programme>
+    <programme start="20250210233000 +0545" stop="20250210000000 +0545" channel="62" catchup-id="11799105">
+        <title>Nick Junior</title>
+        <desc>Masha, a young girl, retells famous fairy tales creatively as per her imagination and gives twists to the plot and characters.</desc>
+        <sub-title>Mashas Tales</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO403820028203_px0219315a//thumbnail.png"/>
         <category>Kids</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="62" catchup-id="11842058">
@@ -24170,6 +24562,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GObc6a3d983b31_px0219446//thumbnail.png"/>
         <category>NEWS</category>
     </programme>
+    <programme start="20250210233000 +0545" stop="20250210000000 +0545" channel="81" catchup-id="11802951">
+        <title>BBC</title>
+        <desc>Stay in the loop with Business Today Get the latest news and insightful analysis on business trends from Singapore and beyond. Perfect for anyone keen on the global market</desc>
+        <sub-title>The World Today With Maryam Moshiri</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO5b40b4bdd97c_px0219450//thumbnail.png"/>
+        <category>NEWS</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211003000 +0545" channel="81" catchup-id="11844146">
         <title>BBC</title>
         <desc>Stay in the loop with Business Today Get the latest news and insightful analysis on business trends from Singapore and beyond. Perfect for anyone keen on the global market</desc>
@@ -24716,6 +25115,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO1fc82ec5c041_px0219447//thumbnail.png"/>
         <category>NEWS</category>
     </programme>
+    <programme start="20250210233000 +0545" stop="20250210000000 +0545" channel="9" catchup-id="11803881">
+        <title>zeenewssd</title>
+        <desc>A news bulletin, which keeps the viewers updated with the latest regional and national news.</desc>
+        <sub-title>News Bulletin</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO521fa5db33de_px0219285//thumbnail.png"/>
+        <category>NEWS</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211003000 +0545" channel="9" catchup-id="11844698">
         <title>zeenewssd</title>
         <desc>A news bulletin, which keeps the viewers updated with the latest regional and national news.</desc>
@@ -25050,6 +25456,13 @@
         <desc>This is News - News Bulletin Category.</desc>
         <sub-title>Viral 30</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO521fa5db33de_px0219285//thumbnail.png"/>
+        <category>NEWS</category>
+    </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="26" catchup-id="11804390">
+        <title>Times Now</title>
+        <desc>News bulletin to bring you up-to-date with the latest news stories and events of the day.</desc>
+        <sub-title>News Now Overnight</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOab92b7ada511_px0219286//thumbnail.png"/>
         <category>NEWS</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="26" catchup-id="11845034">
@@ -25409,6 +25822,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO175135f8de60_px0219286//thumbnail.png"/>
         <category>NEWS</category>
     </programme>
+    <programme start="20250210233000 +0545" stop="20250210000000 +0545" channel="35" catchup-id="11805174">
+        <title>News 18</title>
+        <desc>The host presents the latest news in politics, social issues, economy and sports.</desc>
+        <sub-title>Breaking On News18</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GObb4aa086ef83_px0219284//thumbnail.png"/>
+        <category>NEWS</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="35" catchup-id="11845431">
         <title>News 18</title>
         <desc>Debate steeped in facts anchored by Rahul Shivashankar</desc>
@@ -25589,6 +26009,13 @@
         <desc>The host presents the latest news in politics, social issues, economy and sports.</desc>
         <sub-title>Breaking On News18</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GObb4aa086ef83_px0219284//thumbnail.png"/>
+        <category>NEWS</category>
+    </programme>
+    <programme start="20250210233000 +0545" stop="20250210000000 +0545" channel="73" catchup-id="11805598">
+        <title>Zee Business</title>
+        <desc>The host presents the latest news updates and developments pertaining to social issues, business and politics from all over India.</desc>
+        <sub-title>India 360</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO1d3e91b82b97_px0219450//thumbnail.png"/>
         <category>NEWS</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211003000 +0545" channel="73" catchup-id="11845647">
@@ -26095,6 +26522,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO6a1facde8803_px0219450//thumbnail.png"/>
         <category>NEWS</category>
     </programme>
+    <programme start="20250210233500 +0545" stop="20250210000000 +0545" channel="175" catchup-id="11806521">
+        <title>Aajtak</title>
+        <desc>The daily wrap on Mumbai news, capturing the citys day-to-day events.</desc>
+        <sub-title>Mumbai Metro</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOfb654ff31c93_px0219450//thumbnail.png"/>
+        <category>NEWS</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211001000 +0545" channel="175" catchup-id="11846175">
         <title>Aajtak</title>
         <desc>Join our host as they chat with a lively panel of experts, each sharing their differing views on todays hot social and political topics.</desc>
@@ -26508,6 +26942,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOfb654ff31c93_px0219450//thumbnail.png"/>
         <category>NEWS</category>
     </programme>
+    <programme start="20250210220000 +0545" stop="20250210000000 +0545" channel="69" catchup-id="11807089">
+        <title>Aastha</title>
+        <desc>Religious leaders discuss Lord Ramas significance and legends devotees sing bhajans praising him at a Satsang.</desc>
+        <sub-title>Pujya Chinmayanand Bapu Ji Special Telecast Of Shri Ram Katha From Bilaspur, CG</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO88d819bfa3b9_px0219446//thumbnail.png"/>
+        <category>Devotional</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211020000 +0545" channel="69" catchup-id="11846588">
         <title>Aastha</title>
         <desc>Religious leaders discuss Lord Ramas significance and legends devotees sing bhajans praising him at a Satsang.</desc>
@@ -26660,6 +27101,13 @@
         <desc>Religious leaders discuss Lord Ramas significance and legends devotees sing bhajans praising him at a Satsang.</desc>
         <sub-title>Pujya Chinmayanand Bapu Ji Special Telecast Of Shri Ram Katha From Bilaspur, CG</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO88d819bfa3b9_px0219446//thumbnail.png"/>
+        <category>Devotional</category>
+    </programme>
+    <programme start="20250210225000 +0545" stop="20250210000000 +0545" channel="68" catchup-id="11807460">
+        <title>Sanskar</title>
+        <desc>Join Pujya Rishi Ji Maharaj for a special telecast of Shrimad Bhagwat Katha in Nowgong, M.P., and dive into inspiring stories and teachings that uplift the spirit</desc>
+        <sub-title>Pujya Rishi Ji Maharaj, Special Telecast Of Shrimad Bhagwat Kathaat Nowgong, M.P</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO371f64ab73d2_px0219446//thumbnail.png"/>
         <category>Devotional</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211020000 +0545" channel="68" catchup-id="11846750">
@@ -27439,6 +27887,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO33f522d8d6dc_px0219314//thumbnail.png"/>
         <category>Devotional</category>
     </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="95" catchup-id="11819302">
+        <title>Madani</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GOb1e59683386c_px0219447//thumbnail.png"/>
+        <category>Devotional</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="95" catchup-id="11853738">
         <title>Madani</title>
         <desc>TBA</desc>
@@ -27607,6 +28062,13 @@
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GOb1e59683386c_px0219447//thumbnail.png"/>
         <category>Devotional</category>
     </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="66" catchup-id="11819494">
+        <title>Shubh Cinema</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO8fc43accd05e_px0219446//thumbnail.png"/>
+        <category>Devotional</category>
+    </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="66" catchup-id="11853930">
         <title>Shubh Cinema</title>
         <desc>TBA</desc>
@@ -27773,6 +28235,13 @@
         <desc>TBA</desc>
         <sub-title>Event</sub-title>
         <icon src="https://rsott1.dishhome.com.np/thumbnail/GO8fc43accd05e_px0219446//thumbnail.png"/>
+        <category>Devotional</category>
+    </programme>
+    <programme start="20250210230000 +0545" stop="20250210000000 +0545" channel="110" catchup-id="11819686">
+        <title>Divya</title>
+        <desc>TBA</desc>
+        <sub-title>Event</sub-title>
+        <icon src="https://rsott1.dishhome.com.np/thumbnail/GO4de45e49c62d_px0219314//thumbnail.png"/>
         <category>Devotional</category>
     </programme>
     <programme start="20250211000000 +0545" stop="20250211010000 +0545" channel="110" catchup-id="11854122">

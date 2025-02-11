@@ -12,12 +12,18 @@ genre_url = 'https://soapbox.dishhome.com.np/dhdbcacheV2/liveAssetsBasedOnkey'
 
 # Set Kathmandu timezone
 kathmandu_tz = pytz.timezone('Asia/Kathmandu')
-now = datetime.now(kathmandu_tz)  # Get current time in Kathmandu
+now = datetime.now(kathmandu_tz)
+
+# Set the start time to today's midnight (00:00 AM)
+start_of_day = now.replace(hour=0, minute=0, second=0, microsecond=0)
+
+# Set the stop time to tomorrow's midnight (00:00 AM)
+end_of_day = start_of_day + timedelta(days=1)
 
 # Update payload timestamps
 payload = {
-    'startTimeTimestamp': int(now.timestamp() * 1000),
-    'stopTimeTimestamp': int((now + timedelta(days=1)).timestamp() * 1000),
+    'startTimeTimestamp': int(start_of_day.timestamp() * 1000),  # Start at 12 AM today
+    'stopTimeTimestamp': int(end_of_day.timestamp() * 1000),  # End at 12 AM tomorrow
     'account_id': 1, 'offset': 0, 'limit': 1000,
     'programmeDate': now.strftime('%Y-%m-%d'),  # YYYY-MM-DD format
     'timezone': 'plus0545', 'date': now.strftime('%Y%m%d')  # YYYYMMDD format
@@ -26,19 +32,9 @@ payload = {
 headers = {"Authorization": "Bearer null", "User-Agent": "okhttp/4.10.0"}
 
 # Fetch data
-try:
-    epg_response = requests.post(epg_url, data=payload, headers=headers)
-    epg_response.raise_for_status()
-    epg_data = epg_response.json().get("data", [])
-
-    genre_response = requests.post(genre_url, data=payload, headers=headers)
-    genre_response.raise_for_status()
-    genre_data = genre_response.json()
-
-    genre_mapping = {str(d["id"]): d["name"] for d in genre_data["data"][0]["genreDetails"].values()}
-except Exception as e:
-    print(f"Error fetching data: {e}")
-    exit(1)
+epg_data = requests.post(epg_url, data=payload, headers=headers).json().get("data", [])
+genre_data = requests.post(genre_url, data=payload, headers=headers).json()
+genre_mapping = {str(d["id"]): d["name"] for d in genre_data["data"][0]["genreDetails"].values()}
 
 # Sanitization function
 def sanitize_text(text):
@@ -57,23 +53,29 @@ for channel_data in epg_data:
     thumbnails = channel_data.get("thumbnails", [])
     icon_url = f"https://soapbox.dishhome.com.np/genesis/{thumbnails[0]['thumbnailUrl']}" if thumbnails else ""
 
-    # Create channel entry
     channel = ET.Element("channel", {"id": channel_id})
     ET.SubElement(channel, "display-name").text = channel_title
     if icon_url:
         ET.SubElement(channel, "icon", {"src": icon_url})
     channels.append(channel)
 
-    # Add all programs, regardless of date
     for program in channel_data.get("epg", []):
         programme_date = program.get("programmeDate", "").replace("-", "")
-
         start_time = program.get("startTime", "000000")
         stop_time = program.get("stopTime", "235959")
         program_id = str(program.get("id", "TBA"))
 
-        start = programme_date + start_time.replace(":", "") + " +0545"
-        stop = programme_date + stop_time.replace(":", "") + " +0545"
+        # Convert start and stop times to datetime objects
+        program_start = kathmandu_tz.localize(datetime.strptime(programme_date + start_time, "%Y%m%d%H%M%S"))
+        program_stop = kathmandu_tz.localize(datetime.strptime(programme_date + stop_time, "%Y%m%d%H%M%S"))
+
+        # Ensure the program falls within our 12 AM to 12 AM window
+        if not (start_of_day <= program_start < end_of_day):
+            continue
+
+        # Format timestamps in EPG format
+        start = program_start.strftime('%Y%m%d%H%M%S') + " +0545"
+        stop = program_stop.strftime('%Y%m%d%H%M%S') + " +0545"
 
         title = sanitize_text(program.get("displayName", "TBA"))
         description = sanitize_text(program.get("description", "TBA"))
@@ -95,7 +97,6 @@ for channel_data in epg_data:
 
         programmes.append(programme)
 
-# Append channels and programs to XML
 for element in channels + programmes:
     tv.append(element)
 
@@ -110,5 +111,5 @@ with open("gotv.xml", "w", encoding="utf-8") as xml_file:
 with gzip.open("gotv.xml.gz", "wt", encoding="utf-8") as gz_file:
     gz_file.write(pretty_xml)
 
-print(f"EPG Data fetched for {now.strftime('%Y-%m-%d %H:%M:%S')} (Kathmandu Time)")
+print(f"EPG Data fetched for {start_of_day.strftime('%Y-%m-%d')} (12:00 AM to 11:59 PM) Kathmandu Time")
 print("XML and compressed XML files saved successfully as gotv.xml and gotv.xml.gz.")

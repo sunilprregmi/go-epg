@@ -4,7 +4,7 @@ from xml.dom import minidom
 from datetime import datetime, timedelta
 import re
 import gzip
-import pytz  # Import pytz for timezone handling
+import pytz  # Import timezone library
 
 # URLs for data
 epg_url = 'https://soapbox.dishhome.com.np/dhdbcacheV2/epgjson'
@@ -18,7 +18,7 @@ now = datetime.now(kathmandu_tz)  # Current time in Kathmandu
 start_of_day = datetime(now.year, now.month, now.day, 0, 0, 0, tzinfo=kathmandu_tz)  # 12:00 AM
 end_of_day = start_of_day + timedelta(days=1) - timedelta(seconds=1)  # 11:59:59 PM
 
-# Update payload timestamps
+# Update payload timestamps (in milliseconds)
 payload = {
     'startTimeTimestamp': int(start_of_day.timestamp() * 1000),  # 12:00 AM
     'stopTimeTimestamp': int(end_of_day.timestamp() * 1000),  # 11:59:59 PM
@@ -58,22 +58,23 @@ for channel_data in epg_data:
     channels.append(channel)
 
     for program in channel_data.get("epg", []):
-        programme_date = program.get("programmeDate", "").replace("-", "")
-        start_time = program.get("startTime", "000000")
-        stop_time = program.get("stopTime", "235959")
         program_id = str(program.get("id", "TBA"))
 
-        # Convert to datetime object for validation
-        program_start = datetime.strptime(f"{programme_date} {start_time}", "%Y%m%d %H:%M:%S").replace(tzinfo=kathmandu_tz)
-        program_stop = datetime.strptime(f"{programme_date} {stop_time}", "%Y%m%d %H:%M:%S").replace(tzinfo=kathmandu_tz)
+        # Fix: Use actual timestamps from API
+        start_timestamp = int(program.get("startTimeTimestamp", 0)) / 1000  # Convert from milliseconds to seconds
+        stop_timestamp = int(program.get("stopTimeTimestamp", 0)) / 1000  # Convert from milliseconds to seconds
+
+        # Convert timestamps to Nepal Time
+        start_time = datetime.fromtimestamp(start_timestamp, kathmandu_tz)
+        stop_time = datetime.fromtimestamp(stop_timestamp, kathmandu_tz)
 
         # Ensure the program belongs to today's EPG (including those that end at 12:00 AM)
-        if not (start_of_day <= program_stop <= end_of_day):
+        if not (start_of_day <= stop_time <= end_of_day):
             continue  
 
-        # Format timestamps for XMLTV
-        start = program_start.strftime("%Y%m%d%H%M%S") + " +0545"
-        stop = program_stop.strftime("%Y%m%d%H%M%S") + " +0545"
+        # Format timestamps for XMLTV (Correct +0545 time offset)
+        start = start_time.strftime("%Y%m%d%H%M%S") + " +0545"
+        stop = stop_time.strftime("%Y%m%d%H%M%S") + " +0545"
 
         title = sanitize_text(program.get("displayName", "TBA"))
         description = sanitize_text(program.get("description", "TBA"))

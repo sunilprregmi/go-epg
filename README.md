@@ -6,8 +6,6 @@ The **DH GO Public EPG** project is designed to automatically fetch Electronic P
 
 This project fetches data from an external API, processes it into an XML format, and creates both an uncompressed and compressed version of the XML file.
 
-**Please note:** This project is not affiliated with **golive.dishhome.com.np** or **Dish Media Network Pvt. Ltd.**. All rights are reserved by them, and all their property remains under their ownership. This project is developed for easy access to their public resources.
-
 ## Features
 - **Daily EPG Update**: The project fetches up-to-date TV program data from an external source.
 - **Automated Process**: The entire process runs automatically every day at **6:00 AM Kathmandu Time (12:15 AM UTC)**, ensuring that your EPG data is always current.

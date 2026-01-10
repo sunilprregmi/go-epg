@@ -1,114 +1,230 @@
-import requests
-import xml.etree.ElementTree as ET
-from xml.dom import minidom
-from datetime import datetime, timedelta
-import re
+#!/usr/bin/env python3
+import json
 import gzip
-import pytz  # Import timezone library
+import requests
+from datetime import datetime, timedelta
+from xml.etree.ElementTree import Element, SubElement, tostring
+from xml.dom import minidom
+import os
 
-# URLs for data
-epg_url = 'https://soapbox.dishhome.com.np/dhdbcacheV2/epgjson'
-genre_url = 'https://soapbox.dishhome.com.np/dhdbcacheV2/liveAssetsBasedOnkey'
+class DishHomeGoEPG:
+    def __init__(self):
+        self.base_url = "https://storefront.dishhomego.com.np/dhome/web-app/webepg"
+        self.image_base = "https://assets.dishhomego.com.np/"
+        self.headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0'}
+    
+    def get_date_range(self):
+        today = datetime.now()
+        start = (today - timedelta(days=2)).replace(hour=18, minute=30, second=0)
+        end = (today + timedelta(days=3)).replace(hour=18, minute=29, second=59)
+        return start, end
+    
+    def fetch_data(self):
+        start_date, end_date = self.get_date_range()
+        start_enc = start_date.strftime('%Y-%m-%d %H:%M:%S').replace(' ', '%20').replace(':', '%3A')
+        end_enc = end_date.strftime('%Y-%m-%d %H:%M:%S').replace(' ', '%20').replace(':', '%3A')
+        
+        channels = []
+        page = 1
+        
+        while page <= 20:
+            url = f"{self.base_url}?start={start_enc}&stop={end_enc}&page={page}"
+            try:
+                response = requests.get(url, headers=self.headers, timeout=30)
+                data = response.json()
+                
+                if not data.get('list'):
+                    break
+                
+                channels.extend(data['list'])
+                page += 1
+            except:
+                break
+        
+        return channels
+    
+    def create_fallback_programs(self, channel):
+        """Create fallback programs using channel's actual information."""
+        programs = []
+        now = datetime.now().replace(minute=0, second=0, microsecond=0)
+        
+        # Use channel's actual data
+        channel_title = channel.get('title', '')
+        channel_desc = channel.get('fullSynopsis', '')
+        channel_cats = channel.get('catogory', [])
+        channel_images = channel.get('images', [])
+        
+        for day in range(5):
+            for hour in range(24):
+                start_time = (now + timedelta(days=day, hours=hour))
+                end_time = start_time + timedelta(hours=1)
+                
+                program = {
+                    'title': channel_title,
+                    'start': start_time.strftime('%Y-%m-%dT%H:%M:%S.000Z'),
+                    'stop': end_time.strftime('%Y-%m-%dT%H:%M:%S.000Z'),
+                    'fullSynopsis': channel_desc,
+                    'shortSynopsis': channel_desc[:100] + '...' if len(channel_desc) > 100 else channel_desc,
+                    'catogory': channel_cats,
+                    'images': channel_images[:1] if channel_images else []
+                }
+                programs.append(program)
+        
+        return programs
+    
+    def format_time(self, time_str):
+        if not time_str:
+            return ""
+        try:
+            dt = datetime.fromisoformat(time_str.replace('.000Z', '').replace('Z', '+00:00'))
+            return dt.strftime('%Y%m%d%H%M%S +0000')
+        except:
+            return ""
+    
+    def get_image_url(self, path):
+        if not path:
+            return ""
+        if path.startswith('/'):
+            path = path[1:]
+        return f"{self.image_base}{path}"
+    
+    def create_xml(self, channels):
+        tv = Element('tv')
+        tv.set('generator-info-name', 'DishHomeGo EPG')
+        tv.set('generator-info-url', 'https://storefront.dishhomego.com.np')
+        
+        for channel in channels:
+            chan_id = str(channel.get('epgId') or channel.get('id', ''))
+            chan_elem = SubElement(tv, 'channel')
+            chan_elem.set('id', chan_id)
+            
+            name = SubElement(chan_elem, 'display-name')
+            name.text = channel.get('title', '')
+            
+            images = channel.get('images', [])
+            if images:
+                icon = SubElement(chan_elem, 'icon')
+                icon.set('src', self.get_image_url(images[0].get('path', '')))
+        
+        total_programs = 0
+        
+        for channel in channels:
+            chan_id = str(channel.get('epgId') or channel.get('id', ''))
+            
+            # Get programs - real or fallback
+            if 'epgPrograms' in channel and 'list' in channel['epgPrograms'] and channel['epgPrograms']['list']:
+                programs = channel['epgPrograms']['list']
+            else:
+                # Create fallback programs using channel's own data
+                programs = self.create_fallback_programs(channel)
+            
+            for idx, prog in enumerate(programs):
+                start = self.format_time(prog.get('start'))
+                stop = self.format_time(prog.get('stop'))
+                
+                if not start or not stop:
+                    continue
+                
+                total_programs += 1
+                
+                programme = SubElement(tv, 'programme')
+                programme.set('start', start)
+                programme.set('stop', stop)
+                programme.set('channel', chan_id)
+                programme.set('catchup-id', f"{datetime.now().strftime('%d%m%y')}{chan_id[:6]}{idx:03d}")
+                
+                # Title - use channel title as fallback
+                title_text = prog.get('title') or channel.get('title', 'Programme')
+                SubElement(programme, 'title').text = title_text
+                
+                # Description - use program or channel description
+                desc_text = prog.get('fullSynopsis') or channel.get('fullSynopsis', '')
+                SubElement(programme, 'desc').text = desc_text
+                
+                # Category
+                category = SubElement(programme, 'category')
+                cats = prog.get('catogory', []) or channel.get('catogory', ['General'])
+                category.text = str(cats[0]) if cats else 'General'
+                
+                # Date
+                try:
+                    prog_date = datetime.fromisoformat(prog.get('start', '').replace('.000Z', '').replace('Z', '+00:00'))
+                    SubElement(programme, 'date').text = prog_date.strftime('%Y%m%d')
+                except:
+                    SubElement(programme, 'date').text = datetime.now().strftime('%Y%m%d')
+                
+                # Icon - use program image or channel image
+                prog_images = channel.get('images', [])
+                if prog_images:
+                    icon = SubElement(programme, 'icon')
+                    icon.set('src', self.get_image_url(prog_images[0].get('path', '')))
+                else:
+                    channel_images = channel.get('images', [])
+                    if channel_images:
+                        icon = SubElement(programme, 'icon')
+                        icon.set('src', self.get_image_url(channel_images[0].get('path', '')))
+                
+                # Sub-title
+                sub_text = prog.get('shortSynopsis', '') or desc_text[:100] + '...' if len(desc_text) > 100 else desc_text
+                SubElement(programme, 'sub-title').text = sub_text
+        
+        return tv, total_programs
+    
+    def save_xml(self, xml_element):
+        xml_str = minidom.parseString(tostring(xml_element, 'utf-8')).toprettyxml(indent='\t')
+        xml_str = '<?xml version="1.0" encoding="utf-8"?>\n' + xml_str.split('\n', 1)[1]
+        
+        with open('gotv.xml', 'w', encoding='utf-8') as f:
+            f.write(xml_str)
+        
+        return os.path.getsize('gotv.xml')
+    
+    def compress(self):
+        with open('gotv.xml', 'rb') as f_in:
+            with gzip.open('gotv.xml.gz', 'wb') as f_out:
+                f_out.write(f_in.read())
+        
+        return os.path.getsize('gotv.xml.gz')
+    
+    def run(self):
+        print("DishHomeGo EPG Generator")
+        print("=" * 40)
+        
+        print("Fetching data...")
+        channels = self.fetch_data()
+        
+        if not channels:
+            print("No data fetched")
+            return
+        
+        # Count channels without EPG
+        no_epg_count = 0
+        for channel in channels:
+            if not ('epgPrograms' in channel and 'list' in channel['epgPrograms'] and channel['epgPrograms']['list']):
+                no_epg_count += 1
+        
+        print(f"Found {len(channels)} channels ({no_epg_count} without EPG)")
+        
+        print("Generating XML...")
+        xml, program_count = self.create_xml(channels)
+        
+        print("Saving files...")
+        xml_size = self.save_xml(xml)
+        gz_size = self.compress()
+        
+        print("\n" + "=" * 40)
+        print("EPG Generation Complete")
+        print("=" * 40)
+        print(f"Channels: {len(channels)}")
+        print(f"  - With EPG: {len(channels) - no_epg_count}")
+        print(f"  - With fallback: {no_epg_count}")
+        print(f"Total programs: {program_count}")
+        print(f"Files: gotv.xml ({xml_size/1024:.1f} KB)")
+        print(f"       gotv.xml.gz ({gz_size/1024:.1f} KB)")
+        print(f"Compression: {(1 - (gz_size / xml_size)) * 100:.1f}%")
 
-# Set Kathmandu timezone
-kathmandu_tz = pytz.timezone('Asia/Kathmandu')
-now = datetime.now(kathmandu_tz)  # Current time in Kathmandu
+def main():
+    DishHomeGoEPG().run()
 
-# Get today's date and 12:00 AM timestamp for whole day EPG
-start_of_day = datetime(now.year, now.month, now.day, 0, 0, 0, tzinfo=kathmandu_tz)  # 12:00 AM
-end_of_day = start_of_day + timedelta(days=1) - timedelta(seconds=1)  # 11:59:59 PM
-
-# Update payload timestamps (in milliseconds)
-payload = {
-    'startTimeTimestamp': int(start_of_day.timestamp() * 1000),  # 12:00 AM
-    'stopTimeTimestamp': int(end_of_day.timestamp() * 1000),  # 11:59:59 PM
-    'account_id': 1, 'offset': 0, 'limit': 1000,
-    'programmeDate': now.strftime('%Y-%m-%d'),  # YYYY-MM-DD format
-    'timezone': 'plus0545', 'date': now.strftime('%Y%m%d')  # YYYYMMDD format
-}
-
-headers = {"Authorization": "Bearer null", "User-Agent": "okhttp/4.10.0"}
-
-# Fetch data
-epg_data = requests.post(epg_url, data=payload, headers=headers).json().get("data", [])
-genre_data = requests.post(genre_url, data=payload, headers=headers).json()
-genre_mapping = {str(d["id"]): d["name"] for d in genre_data["data"][0]["genreDetails"].values()}
-
-# Sanitization function
-def sanitize_text(text):
-    if text:
-        sanitized = re.sub(r'[^a-zA-Z0-9\s\.,-]', '', text)
-        return re.sub(r'\s+', ' ', sanitized).strip()
-    return "TBA"
-
-# Create XML structure
-tv = ET.Element("tv", {"generator-info-name": "@guruusr", "generator-info-url": "https:/t.me/guruusr"})
-channels, programmes = [], []
-
-for channel_data in epg_data:
-    channel_id = str(channel_data["id"])
-    channel_title = sanitize_text(channel_data.get("title", "TBA"))
-    thumbnails = channel_data.get("thumbnails", [])
-    icon_url = f"https://soapbox.dishhome.com.np/genesis/{thumbnails[0]['thumbnailUrl']}" if thumbnails else ""
-
-    channel = ET.Element("channel", {"id": channel_id})
-    ET.SubElement(channel, "display-name").text = channel_title
-    if icon_url:
-        ET.SubElement(channel, "icon", {"src": icon_url})
-    channels.append(channel)
-
-    for program in channel_data.get("epg", []):
-        program_id = str(program.get("id", "TBA"))
-
-        # Fix: Use actual timestamps from API
-        start_timestamp = int(program.get("startTimeTimestamp", 0)) / 1000  # Convert from milliseconds to seconds
-        stop_timestamp = int(program.get("stopTimeTimestamp", 0)) / 1000  # Convert from milliseconds to seconds
-
-        # Convert timestamps to Nepal Time
-        start_time = datetime.fromtimestamp(start_timestamp, kathmandu_tz)
-        stop_time = datetime.fromtimestamp(stop_timestamp, kathmandu_tz)
-
-        # Ensure the program belongs to today's EPG (including those that end at 12:00 AM)
-        if not (start_of_day <= stop_time <= end_of_day):
-            continue  
-
-        # Format timestamps for XMLTV (Correct +0545 time offset)
-        start = start_time.strftime("%Y%m%d%H%M%S") + " +0545"
-        stop = stop_time.strftime("%Y%m%d%H%M%S") + " +0545"
-
-        title = sanitize_text(program.get("displayName", "TBA"))
-        description = sanitize_text(program.get("description", "TBA"))
-        sub_title = sanitize_text(program.get("title", "TBA"))
-        live_thumbnail = channel_data.get("liveThumbnailPath", "") + "/thumbnail.png"
-
-        programme = ET.Element("programme", {
-            "start": start, "stop": stop, "channel": channel_id, "catchup-id": program_id
-        })
-        ET.SubElement(programme, "title").text = title
-        ET.SubElement(programme, "desc").text = description
-        ET.SubElement(programme, "sub-title").text = sub_title
-        ET.SubElement(programme, "icon", {"src": live_thumbnail})
-
-        unique_categories = {genre_mapping.get(str(g["genreId"]), "Uncategorized") for g in channel_data.get("genres", [])}
-        for category in unique_categories:
-            if category != "Uncategorized" or len(unique_categories) == 1:
-                ET.SubElement(programme, "category").text = category
-
-        programmes.append(programme)
-
-for element in channels + programmes:
-    tv.append(element)
-
-# Format XML output
-pretty_xml = minidom.parseString(ET.tostring(tv, encoding="utf-8", method="xml")).toprettyxml(indent="    ")
-
-# Save the XML file
-with open("gotv.xml", "w", encoding="utf-8") as xml_file:
-    xml_file.write(pretty_xml)
-
-# Save the compressed XML file
-with gzip.open("gotv.xml.gz", "wt", encoding="utf-8") as gz_file:
-    gz_file.write(pretty_xml)
-
-print(f"EPG Data fetched for {now.strftime('%Y-%m-%d %H:%M:%S')} (Kathmandu Time)")
-print("XML and compressed XML files saved successfully as gotv.xml and gotv.xml.gz.")
+if __name__ == '__main__':
+    main()

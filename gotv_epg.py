@@ -51,6 +51,7 @@ class DishHomeGoEPG:
         # Use channel's actual data
         channel_title = channel.get('title', '')
         channel_desc = channel.get('fullSynopsis', '')
+        channel_short_desc = channel.get('fullSynopsis', '')[:100] + '...' if len(channel.get('fullSynopsis', '')) > 100 else channel.get('fullSynopsis', '')
         channel_cats = channel.get('catogory', [])
         channel_images = channel.get('images', [])
         
@@ -64,7 +65,7 @@ class DishHomeGoEPG:
                     'start': start_time.strftime('%Y-%m-%dT%H:%M:%S.000Z'),
                     'stop': end_time.strftime('%Y-%m-%dT%H:%M:%S.000Z'),
                     'fullSynopsis': channel_desc,
-                    'shortSynopsis': channel_desc[:100] + '...' if len(channel_desc) > 100 else channel_desc,
+                    'shortSynopsis': channel_short_desc,
                     'catogory': channel_cats,
                     'images': channel_images[:1] if channel_images else []
                 }
@@ -133,11 +134,11 @@ class DishHomeGoEPG:
                 programme.set('channel', chan_id)
                 programme.set('catchup-id', f"{datetime.now().strftime('%d%m%y')}{chan_id[:6]}{idx:03d}")
                 
-                # Title - use channel title as fallback
+                # Title
                 title_text = prog.get('title') or channel.get('title', 'Programme')
                 SubElement(programme, 'title').text = title_text
                 
-                # Description - use program or channel description
+                # Description
                 desc_text = prog.get('fullSynopsis') or channel.get('fullSynopsis', '')
                 SubElement(programme, 'desc').text = desc_text
                 
@@ -153,8 +154,8 @@ class DishHomeGoEPG:
                 except:
                     SubElement(programme, 'date').text = datetime.now().strftime('%Y%m%d')
                 
-                # Icon - use program image or channel image
-                prog_images = channel.get('images', [])
+                # Icon
+                prog_images = prog.get('images', [])
                 if prog_images:
                     icon = SubElement(programme, 'icon')
                     icon.set('src', self.get_image_url(prog_images[0].get('path', '')))
@@ -164,8 +165,8 @@ class DishHomeGoEPG:
                         icon = SubElement(programme, 'icon')
                         icon.set('src', self.get_image_url(channel_images[0].get('path', '')))
                 
-                # Sub-title
-                sub_text = prog.get('shortSynopsis', '') or desc_text[:100] + '...' if len(desc_text) > 100 else desc_text
+                # Sub-title - Use actual shortSynopsis
+                sub_text = prog.get('shortSynopsis', '')
                 SubElement(programme, 'sub-title').text = sub_text
         
         return tv, total_programs
